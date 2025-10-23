@@ -15,3 +15,5 @@ venv/
 # OS files
 .DS_Store
 "@ | Out-File -Encoding utf8 .gitignore
+
+serviceAccountKey.json
