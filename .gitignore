@@ -1,0 +1,17 @@
+@"
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+"@ | Out-File -Encoding utf8 .gitignore
