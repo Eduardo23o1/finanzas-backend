@@ -1,5 +1,11 @@
 ## Configuración del Backend
 
+## Requisitos
+
+* Python 3.13.5
+* pip (viene con Python)
+* MongoDB corriendo localmente
+
 1. Crear un archivo `.env` en la raíz del proyecto con las siguientes variables:
 
 ```
