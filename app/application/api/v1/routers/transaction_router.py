@@ -32,7 +32,7 @@ async def list_transactions(
     current_user: FirebaseUser = Depends(get_current_user),
     use_cases: TransactionUseCases = Depends(get_transaction_use_cases),
     type: Optional[TransactionType] = Query(None, description="Filtrar por tipo: income o expense"),
-    category: Optional[CategoryType] = Query(None, description="Filtrar por categoría")  # 👈 nuevo parámetro
+    category: Optional[CategoryType] = Query(None, description="Filtrar por categoría")
 ):
     return await use_cases.list_transactions(current_user.uid, type, category)
 

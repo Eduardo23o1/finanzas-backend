@@ -11,9 +11,9 @@ class TransactionUseCases:
     async def create_transaction(self, transaction: Transaction) -> Transaction:
         if transaction.amount <= 0:
             raise ValueError("El monto debe ser mayor que cero.")
-        if transaction.type == TransactionType.EXPENSE and transaction.amount > 0:
-            transaction.amount = -transaction.amount
+        # Ya no cambiamos el signo para los gastos
         return await self.repository.create(transaction)
+
 
     async def get_transaction(self, transaction_id: str) -> Optional[Transaction]:
         transaction = await self.repository.get_by_id(transaction_id)
